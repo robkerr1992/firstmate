@@ -1,0 +1,14 @@
+== BASE test_branch_teardown_of_pushed_open_pr_refuses
+not ok - branch-pushed-open (direct-PR): the branch must not tear down an open PR: expected exit 1, got 0
+exit=1
+== BASE test_branch_teardown_refuses_when_forge_unreachable
+not ok - branch-pushed-gh-error: an unreachable forge is not merge proof: expected exit 1, got 0
+exit=1
+== BASE test_branch_teardown_of_gone_worktree_needs_merged_pr
+not ok - branch-gone-OPEN: a gone worktree is not merge proof: expected exit 1, got 0
+exit=1
+== BASE test_branch_teardown_of_pushed_merged_pr_allows
+ok - supervision branch teardown of a pushed branch whose PR merged at HEAD succeeds (z2)
+exit=0
+== BASE test_main_teardown_of_pushed_open_pr_still_allows
+exit=0

@@ -1,0 +1,51 @@
+===== TARGET (fix) =====
+### actor=branch forge PR state=OPEN (branch pushed to origin, pr= recorded, merge poll armed)
+$ FM_SUPERVISION_ACTOR=branch bin/fm-teardown.sh task-x1
+stderr: REFUSED: task task-x1's pull request https://github.com/example/repo/pull/7 is not proven merged - the forge does not report it merged, could not be reached, or no PR is recorded - and the supervision branch only cleans up merged work.
+stderr: Leave the task for its merge notice: work on a remote whose PR is still open is safe but not landed.
+exit=1
+state/task-x1.meta: present
+state/task-x1.check.sh: present
+state/task-x1.pr-poll: present
+backlog row: in_flight
+gh calls: 1
+
+### actor=branch forge PR state=ERROR (branch pushed to origin, pr= recorded, merge poll armed)
+$ FM_SUPERVISION_ACTOR=branch bin/fm-teardown.sh task-x1
+stderr: REFUSED: task task-x1's pull request https://github.com/example/repo/pull/7 is not proven merged - the forge does not report it merged, could not be reached, or no PR is recorded - and the supervision branch only cleans up merged work.
+stderr: Leave the task for its merge notice: work on a remote whose PR is still open is safe but not landed.
+exit=1
+state/task-x1.meta: present
+state/task-x1.check.sh: present
+state/task-x1.pr-poll: present
+backlog row: in_flight
+gh calls: 1
+
+### actor=branch forge PR state=MERGED (branch pushed to origin, pr= recorded, merge poll armed)
+$ FM_SUPERVISION_ACTOR=branch bin/fm-teardown.sh task-x1
+exit=0
+state/task-x1.meta: removed
+state/task-x1.check.sh: removed
+state/task-x1.pr-poll: removed
+backlog row: done
+gh calls: 1
+
+### actor=main forge PR state=OPEN (branch pushed to origin, pr= recorded, merge poll armed)
+$ FM_SUPERVISION_ACTOR=main bin/fm-teardown.sh task-x1
+exit=0
+state/task-x1.meta: removed
+state/task-x1.check.sh: removed
+state/task-x1.pr-poll: removed
+backlog row: done
+gh calls: 0
+
+===== BASE fb75c1f (pre-fix) =====
+### actor=branch forge PR state=OPEN (branch pushed to origin, pr= recorded, merge poll armed)
+$ FM_SUPERVISION_ACTOR=branch bin/fm-teardown.sh task-x1
+exit=0
+state/task-x1.meta: removed
+state/task-x1.check.sh: removed
+state/task-x1.pr-poll: removed
+backlog row: done
+gh calls: 0
+

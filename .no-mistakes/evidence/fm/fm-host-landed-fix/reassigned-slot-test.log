@@ -1,0 +1,6 @@
+== test_branch_teardown_of_reassigned_slot_needs_merged_pr
+ok - fm-teardown: the supervision branch cleans up a reassigned-slot task only when its recorded PR is merged
+exit=0
+== test_reassigned_pool_slot_finishes_own_cleanup_without_touching_the_slot
+ok - fm-teardown: a pool slot claimed by another task is left alone while the task's own cleanup finishes
+exit=0

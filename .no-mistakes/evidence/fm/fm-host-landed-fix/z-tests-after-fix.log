@@ -1,0 +1,29 @@
+== test_branch_teardown_of_pushed_open_pr_refuses
+fm-contributions: data directory unavailable
+contributions: observation not armed; coverage is unconfirmed
+ok - supervision branch teardown of a pushed branch with an open PR refuses and keeps the merge poll (z1)
+exit=0
+== test_branch_teardown_of_pushed_merged_pr_allows
+fm-contributions: data directory unavailable
+contributions: observation not armed; coverage is unconfirmed
+ok - supervision branch teardown of a pushed branch whose PR merged at HEAD succeeds (z2)
+exit=0
+== test_branch_teardown_refuses_when_forge_unreachable
+fm-contributions: data directory unavailable
+contributions: observation not armed; coverage is unconfirmed
+ok - supervision branch teardown refuses when the forge cannot be reached (z3)
+exit=0
+== test_main_teardown_of_pushed_open_pr_still_allows
+fm-contributions: data directory unavailable
+contributions: observation not armed; coverage is unconfirmed
+ok - main teardown of a pushed branch with an open PR still succeeds, as for fork-pushed contributions (z4)
+exit=0
+== test_branch_teardown_of_gone_worktree_needs_merged_pr
+ok - supervision branch teardown of a task whose worktree is gone requires its recorded PR to be merged (z5)
+exit=0
+== test_already_on_origin_allows
+/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T//fm-z.XrhOj4/runner.sh: line 4805: test_already_on_origin_allows: command not found
+exit=127
+== test_gh_error_and_content_absent_refuses
+ok - gh lookup error with content not in default refuses (fail-safe)
+exit=0
