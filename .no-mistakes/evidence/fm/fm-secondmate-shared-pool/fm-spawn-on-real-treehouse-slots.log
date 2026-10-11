@@ -1,0 +1,36 @@
+=== treehouse v2, harness claude
+spawning clone: $W/case2/mate-home/projects/bodl; slot handed out by real treehouse v2.0.1: $W/case2/home/.treehouse/bodl-4700af/1/bodl
+warning: $W/case2/mate-home/data/bodl-ship-claude-case2/launch-brief.md records no ship branch; defaulting to legacy branch fm/bodl-ship-claude-case2
+warning: $W/case2/mate-home/data/bodl-ship-claude-case2/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: treehouse get handed out pool slot '$W/case2/home/.treehouse/bodl-4700af/1/bodl', which belongs to another clone (git common dir '/private$W/case2/main-home/projects/bodl/.git'), not the spawning clone '$W/case2/mate-home/projects/bodl' (git common dir '/private$W/case2/mate-home/projects/bodl/.git'); Treehouse before 3.0.0 shares one pool among clones of the same origin and reuses any free slot, so upgrade Treehouse to 3.0.0 or later (installed: v2.0.1); refusing to launch. Inspect target firstmate:fm-bodl-ship-claude-case2
+fm-spawn exit=1
+meta: none (no task state written)
+slot owner file: 
+claude trust store: not written
+=== treehouse v2, harness codex
+spawning clone: $W/case2/mate-home/projects/bodl; slot handed out by real treehouse v2.0.1: $W/case2/home/.treehouse/bodl-4700af/1/bodl
+warning: $W/case2/mate-home/data/bodl-ship-codex-case2/launch-brief.md records no ship branch; defaulting to legacy branch fm/bodl-ship-codex-case2
+warning: $W/case2/mate-home/data/bodl-ship-codex-case2/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: treehouse get handed out pool slot '$W/case2/home/.treehouse/bodl-4700af/1/bodl', which belongs to another clone (git common dir '/private$W/case2/main-home/projects/bodl/.git'), not the spawning clone '$W/case2/mate-home/projects/bodl' (git common dir '/private$W/case2/mate-home/projects/bodl/.git'); Treehouse before 3.0.0 shares one pool among clones of the same origin and reuses any free slot, so upgrade Treehouse to 3.0.0 or later (installed: v2.0.1); refusing to launch. Inspect target firstmate:fm-bodl-ship-codex-case2
+fm-spawn exit=1
+meta: none (no task state written)
+slot owner file: 
+claude trust store: not written
+=== treehouse v3, harness claude
+spawning clone: $W/case3/mate-home/projects/bodl; slot handed out by real treehouse v3.1.2: $W/case3/home/.treehouse/bodl-3e2f5d/2/bodl
+warning: $W/case3/mate-home/data/bodl-ship-claude-case3/launch-brief.md records no ship branch; defaulting to legacy branch fm/bodl-ship-claude-case3
+warning: $W/case3/mate-home/data/bodl-ship-claude-case3/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned bodl-ship-claude-case3 harness=claude kind=ship mode=no-mistakes yolo=off window=firstmate:fm-bodl-ship-claude-case3 worktree=$W/case3/home/.treehouse/bodl-3e2f5d/2/bodl
+fm-spawn exit=0
+meta: worktree=$W/case3/home/.treehouse/bodl-3e2f5d/2/bodl project=$W/case3/mate-home/projects/bodl 
+slot owner file: task=bodl-ship-claude-case3 home=$W/case3/mate-home 
+claude trust store written: 1 entries for slot
+=== treehouse v3, harness codex
+spawning clone: $W/case3/mate-home/projects/bodl; slot handed out by real treehouse v3.1.2: $W/case3/home/.treehouse/bodl-3e2f5d/2/bodl
+warning: $W/case3/mate-home/data/bodl-ship-codex-case3/launch-brief.md records no ship branch; defaulting to legacy branch fm/bodl-ship-codex-case3
+warning: $W/case3/mate-home/data/bodl-ship-codex-case3/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned bodl-ship-codex-case3 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-bodl-ship-codex-case3 worktree=$W/case3/home/.treehouse/bodl-3e2f5d/2/bodl
+fm-spawn exit=0
+meta: worktree=$W/case3/home/.treehouse/bodl-3e2f5d/2/bodl project=$W/case3/mate-home/projects/bodl 
+slot owner file: task=bodl-ship-codex-case3 home=$W/case3/mate-home 
+claude trust store written: 1 entries for slot

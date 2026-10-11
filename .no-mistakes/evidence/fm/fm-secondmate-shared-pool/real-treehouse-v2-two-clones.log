@@ -1,0 +1,6 @@
+treehouse v2.0.1
+main-home get -> $W/case2/home/.treehouse/bodl-4700af/1/bodl (common /private$W/case2/main-home/projects/bodl/.git)
+main-home returned $W/case2/home/.treehouse/bodl-4700af/1/bodl
+mate-home get -> $W/case2/home/.treehouse/bodl-4700af/1/bodl (common /private$W/case2/main-home/projects/bodl/.git)
+mate clone common: /private$W/case2/mate-home/projects/bodl/.git
+RESULT: mate got ANOTHER clone's slot (bug)
