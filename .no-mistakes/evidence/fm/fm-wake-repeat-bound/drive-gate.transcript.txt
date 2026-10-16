@@ -1,0 +1,167 @@
+=== S1/S2: six consecutive unchanged stale repeats (cap 5) ===
+--- wake 1
+decision=skip
+why=unchanged since outcome 1
+judge=none
+skips=0
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 1 (0 min ago), skip 1 of at most 5 in a row; still the same situation, no action.
+consume-granted rc=0 output=[]
+queue rows left: 0
+--- wake 2
+decision=skip
+why=unchanged since outcome 2
+judge=none
+skips=1
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 2 (0 min ago), skip 2 of at most 5 in a row; still the same situation, no action.
+consume-granted rc=0 output=[]
+queue rows left: 0
+--- wake 3
+decision=skip
+why=unchanged since outcome 3
+judge=none
+skips=2
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 3 (0 min ago), skip 3 of at most 5 in a row; still the same situation, no action.
+consume-granted rc=0 output=[]
+queue rows left: 0
+--- wake 4
+decision=skip
+why=unchanged since outcome 4
+judge=none
+skips=3
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 4 (0 min ago), skip 4 of at most 5 in a row; still the same situation, no action.
+consume-granted rc=0 output=[]
+queue rows left: 0
+--- wake 5
+decision=skip
+why=unchanged since outcome 5
+judge=none
+skips=4
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 5 (0 min ago), skip 5 of at most 5 in a row; still the same situation, no action.
+consume-granted rc=0 output=[]
+queue rows left: 0
+--- wake 6
+decision=turn
+why=the cap of 5 skips in a row is reached
+judge=none
+skips=5
+--- after a real (non-skip) silent outcome the count resets:
+decision=skip
+
+=== S3: status log grew since last outcome ===
+decision=turn
+why=the status log changed since the previous outcome
+judge=none
+skips=0
+
+=== S4: escalation-worded stale row (not plain) ===
+decision=turn
+why=not only plain stale rows
+judge=none
+skips=0
+--- signal row:
+decision=turn
+why=not only plain stale rows
+judge=none
+skips=0
+
+=== S5: previous outcome older than 60 min / not silent ===
+decision=turn
+why=the previous outcome is older than 3600s
+judge=none
+skips=0
+decision=turn
+why=the previous outcome was not a silent no-op
+judge=none
+skips=0
+decision=turn
+why=no previous outcome
+judge=none
+skips=0
+
+=== S6: attended - captain spoke / mirror missing / mirror quiet ===
+-- captain:
+decision=turn
+why=the captain spoke since the last turn
+judge=none
+skips=0
+-- missing:
+decision=turn
+why=the dialog-mirror feed could not be read
+judge=none
+skips=0
+-- quiet:
+decision=skip
+why=unchanged since outcome 1
+
+=== S7: judge hook ===
+--- on/skip:
+decision=skip
+why=unchanged since outcome 1; the judge agreed
+judge=skip
+elapsed=1s
+--- on/turn:
+decision=turn
+why=the judge did not answer skip
+judge=turn
+elapsed=1s
+--- on/garbage:
+decision=turn
+why=the judge did not answer skip
+judge=other
+elapsed=0s
+--- on/fail:
+decision=turn
+why=the judge did not answer skip
+judge=exit-3
+elapsed=1s
+--- on/slow:
+decision=turn
+why=the judge did not answer skip
+judge=timeout
+elapsed=10s
+--- judge stdin JSON (from on/skip):
+{
+  "version": 1,
+  "mode": "on",
+  "task": "demo",
+  "posture": "away",
+  "wake": {
+    "kind": "stale",
+    "rows": [
+      {
+        "seq": 1,
+        "key": "test:fm-demo",
+        "reason": "stale: test:fm-demo"
+      }
+    ]
+  },
+  "previousOutcome": {
+    "seq": 1,
+    "verdict": "routine",
+    "silent": true,
+    "ageSeconds": 1,
+    "summary": "still idle; no action"
+  },
+  "consecutiveSkips": 0,
+  "latestStatusLine": "working [at=1]: idle at its prompt"
+}
+--- shadow/skip:
+decision=turn
+why=shadow judge: would skip
+judge=skip
+--- shadow/turn:
+decision=turn
+why=shadow judge: would turn
+judge=turn
+--- invalid mode:
+decision=turn
+why=config/supervision-judge names no usable judge
+judge=invalid
+--- missing judge file:
+decision=turn
+why=config/supervision-judge names no usable judge
+judge=invalid
+
+=== S8: consume-granted refused for main actor ===
+wake drain: --consume-granted consumes a supervision branch grant only
+rc=2 rows=1

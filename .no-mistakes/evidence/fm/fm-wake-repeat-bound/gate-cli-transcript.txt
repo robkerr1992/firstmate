@@ -1,0 +1,93 @@
+== six consecutive unchanged stale wakes (FM_SUPERVISION_GATE_SKIPS=0 / WINDOW=1 set and must be ignored) ==
+-- wake 1 (row 1)
+decision=skip
+why=unchanged since outcome 1
+judge=none
+skips=0
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 1 (0 min ago), skip 1 of at most 5 in a row; still the same situation, no action.
+-- wake 2 (row 2)
+decision=skip
+why=unchanged since outcome 2
+judge=none
+skips=1
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 2 (0 min ago), skip 2 of at most 5 in a row; still the same situation, no action.
+-- wake 3 (row 3)
+decision=skip
+why=unchanged since outcome 3
+judge=none
+skips=2
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 3 (0 min ago), skip 3 of at most 5 in a row; still the same situation, no action.
+-- wake 4 (row 4)
+decision=skip
+why=unchanged since outcome 4
+judge=none
+skips=3
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 4 (0 min ago), skip 4 of at most 5 in a row; still the same situation, no action.
+-- wake 5 (row 5)
+decision=skip
+why=unchanged since outcome 5
+judge=none
+skips=4
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 5 (0 min ago), skip 5 of at most 5 in a row; still the same situation, no action.
+-- wake 6 (row 6)
+decision=turn
+why=the cap of 5 skips in a row is reached
+judge=none
+skips=5
+
+== status append -> turn ==
+decision=turn
+why=the status log changed since the previous outcome
+judge=none
+skips=0
+
+== fresh silent outcome, judge on -> judge sees JSON ==
+decision=skip
+why=unchanged since outcome 7; the judge agreed
+judge=skip
+skips=0
+summary=No supervision turn: the repeat bound found demo unchanged since outcome 7 (0 min ago), skip 1 of at most 5 in a row; still the same situation, no action.
+-- judge stdin:
+{
+  "version": 1,
+  "mode": "on",
+  "task": "demo",
+  "posture": "away",
+  "wake": {
+    "kind": "stale",
+    "rows": [
+      {
+        "seq": 8,
+        "key": "test:fm-demo",
+        "reason": "stale: test:fm-demo"
+      }
+    ]
+  },
+  "previousOutcome": {
+    "seq": 7,
+    "verdict": "routine",
+    "silent": true,
+    "ageSeconds": 0,
+    "summary": "idle again"
+  },
+  "consecutiveSkips": 0,
+  "latestStatusLine": "working [at=2]: decided X"
+}
+
+== shadow mode with a skip-saying judge -> still turn ==
+decision=turn
+why=shadow judge: would skip
+judge=skip
+skips=0
+
+== on judge printing garbage -> turn ==
+decision=turn
+why=the judge did not answer skip
+judge=other
+skips=0
+
+== attended with captain words in mirror -> turn ==
+decision=turn
+why=the captain spoke since the last turn
+judge=none
+skips=0

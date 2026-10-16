@@ -1,0 +1,3 @@
+ok - host: an unchanged stale repeat of a silent outcome is recorded and acknowledged without an engine turn, and a status append still takes one
+ok - host: an engine turn that records no outcome hands its durable wake to main
+bash $T  8.49s user 13.20s system 82% cpu 26.386 total

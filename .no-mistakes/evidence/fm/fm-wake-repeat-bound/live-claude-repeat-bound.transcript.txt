@@ -1,0 +1,38 @@
+# claude: 2.1.301 (Claude Code)
+# wake 1 settled
+--- host ledger
+1792129021	start	gen=host-13576-1792129021	primary=claude
+1792129047	handled	turn=host-13576-1792129021.1	posture=away	rc=0	reports=1	error=0 cost=0.078829 conversation_cost=0.078829 input=12 cache_read=88189 cache_write=15624 output=749 turns=6	stale: test:fm-demo
+--- outcome store
+{"seq":1,"task":"demo","verdict":"routine","silent":true,"summary":"Stale wake for demo: no task record exists, so there is nothing to recover. No action taken, per the away instructions."}
+--- queue
+--- host.rc: 
+--- host.out
+watcher: started pid=14207 (beacon fresh)
+# wake 2 settled
+--- host ledger
+1792129021	start	gen=host-13576-1792129021	primary=claude
+1792129047	handled	turn=host-13576-1792129021.1	posture=away	rc=0	reports=1	error=0 cost=0.078829 conversation_cost=0.078829 input=12 cache_read=88189 cache_write=15624 output=749 turns=6	stale: test:fm-demo
+1792129054	skipped	turn=host-13576-1792129021.2	posture=away	task=demo	skips=1	judge=none	unchanged since outcome 1	stale: test:fm-demo
+--- outcome store
+{"seq":1,"task":"demo","verdict":"routine","silent":true,"summary":"Stale wake for demo: no task record exists, so there is nothing to recover. No action taken, per the away instructions."}
+{"seq":2,"task":"demo","verdict":"routine","silent":true,"summary":"No supervision turn: the repeat bound found demo unchanged since outcome 1 (0 min ago), skip 1 of at most 5 in a row; still the same situation, no action."}
+--- queue
+--- host.rc: 
+--- host.out
+watcher: started pid=14207 (beacon fresh)
+# wake 3 settled
+--- host ledger
+1792129021	start	gen=host-13576-1792129021	primary=claude
+1792129047	handled	turn=host-13576-1792129021.1	posture=away	rc=0	reports=1	error=0 cost=0.078829 conversation_cost=0.078829 input=12 cache_read=88189 cache_write=15624 output=749 turns=6	stale: test:fm-demo
+1792129054	skipped	turn=host-13576-1792129021.2	posture=away	task=demo	skips=1	judge=none	unchanged since outcome 1	stale: test:fm-demo
+1792129066	handled	turn=host-13576-1792129021.3	posture=away	rc=0	reports=1	error=0 cost=0.014941 conversation_cost=0.09377 input=6 cache_read=55832 cache_write=1509 output=331 turns=3	signal: /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-live-repeat-bound.luETac/fm/state/demo.status
+--- outcome store
+{"seq":1,"task":"demo","verdict":"routine","silent":true,"summary":"Stale wake for demo: no task record exists, so there is nothing to recover. No action taken, per the away instructions."}
+{"seq":2,"task":"demo","verdict":"routine","silent":true,"summary":"No supervision turn: the repeat bound found demo unchanged since outcome 1 (0 min ago), skip 1 of at most 5 in a row; still the same situation, no action."}
+{"seq":3,"task":"demo","verdict":"routine","silent":true,"summary":"demo is still working (started a follow-up check); nothing new, no action taken."}
+--- queue
+--- host.rc: 
+--- host.out
+watcher: started pid=14207 (beacon fresh)
+# engine conversation: engine=claude model=sonnet session=403edff6-b50a-4f9c-8233-5a0a57cd9463 key=13571:478701464:4294967295 turns=2 conversation_cost=0.09377 

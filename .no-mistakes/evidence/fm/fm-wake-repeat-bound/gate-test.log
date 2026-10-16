@@ -1,0 +1,9 @@
+ok - gate: a plain stale wake whose task is unchanged since a recent silent outcome skips its turn
+ok - gate: a grown status log, an acting or captain outcome, no outcome, or an old one each takes a turn
+ok - gate: signal, decision, detailed stale, missing, and mixed rows always take a turn
+ok - gate: consecutive skips stop at the cap, and a real turn's outcome resets the count
+ok - gate: attended, a feed carrying the captain's words or no feed at all takes a turn
+ok - gate: an on judge decides only wakes the bound would skip, and any answer but skip, a failure, or a timeout takes a turn
+ok - gate: a judge file with an unknown mode, no executable, or an unrunnable one takes a turn
+ok - gate: a shadow judge never skips and records what it would have decided
+bash tests/fm-supervision-gate.test.sh  3.08s user 5.87s system 35% cpu 25.488 total
