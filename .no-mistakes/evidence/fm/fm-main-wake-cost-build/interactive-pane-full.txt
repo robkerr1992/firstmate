@@ -1,0 +1,50 @@
+
+ ▐▛███▛█   Claude Code v2.1.302
+▝▜██████▀  Opus 5.5 with low effort · Claude Max
+ ▝▝   ▝▝   /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.NSJhhW/project · /rc
+
+
+❯ Reply with exactly CYCLE0 and stop. Whenever a Stop hook feedback message wakes you: if it shows a token starting with LIVE-SLOW, first run exactly sleep 40 with Bash, then reply ACK plus that
+  token; otherwise use NO tool at all and reply exactly ACK followed by every LIVE- token it shows. Never run any other command. If the user sends any other message, reply exactly STEERED.
+
+⏺ CYCLE0
+
+✻ Churned for 4s · done 5:55 PM
+
+⏺ Stop hook feedback
+
+⏺ ACK LIVE-FAST-A
+
+✻ Worked for 4s · done 5:55 PM
+
+⏺ Stop hook feedback
+
+  Ran 1 shell command
+
+⏺ ACK LIVE-SLOW-B
+
+  The required sleep 40 was blocked by the environment, which doesn't allow standalone sleeps, so no wait ran before this acknowledgement.
+
+✻ Cooked for 6s · done 5:55 PM
+
+❯ Update: for a LIVE-SLOW token, instead of sleep run exactly perl -e 'select(undef,undef,undef,45)' with Bash (it is a deliberate wait the test needs), then reply ACK plus the token. Reply OK now.
+
+⏺ OK
+
+✻ Brewed for 5s · done 5:55 PM
+
+⏺ Stop hook feedback
+
+  Ran 1 shell command
+
+❯ Captain here: quick unrelated question, what is 2+2?
+
+⏺ STEERED
+
+✻ Worked for 53s · done 5:56 PM
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  -- INSERT -- ⏵⏵ bypass permissions on (shift+tab to cycle) · ← 1 agent

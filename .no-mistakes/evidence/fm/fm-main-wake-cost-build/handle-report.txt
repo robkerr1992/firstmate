@@ -1,0 +1,44 @@
+
+
+
+
+
+
+
+claude rc=0 elapsed=30s version=2.1.302 (Claude Code)
+===== arm-ran
+arm-run=1 pid=74339 1792276839
+arm-run=2 pid=92990 1792276845
+arm-run=3 pid=678 1792276847
+arm-run=4 pid=21700 1792276853
+arm-run=5 pid=22064 1792276853
+===== successor-ran
+successor pid=75165 predecessor=74339 1792276839
+successor pid=5088 predecessor=678 1792276848
+===== wake-ack.log
+1792276840	record	ack_through=1 recovery_generation=live-gen-1 session_pid=33134
+1792276844	committed	ack_through=1 recovery_generation=live-gen-1
+1792276847	suppressed	check: rearm-resurface presented nothing; acknowledged (ack_through=0 recovery_generation=live-gen-2) and re-armed without waking main
+1792276850	record	ack_through=2 recovery_generation=live-gen-3 session_pid=33134
+1792276852	committed	ack_through=2 recovery_generation=live-gen-3
+===== ups.log
+1792276835 ---
+Reply with exactly CYCLE0 and stop. Whenever a Stop hook feedback message wakes you, use no tool at all: reply with exactly ACK followed by every word in the message that starts with LIVEROW, then stop. Never run any command, including bin/fm-wake-drain.sh.
+
+pending_present=no
+===== tool-calls.log
+(absent)
+===== .claude-autoarm-epoch
+epoch=3 owner_pid=16836 outcome=clean updated_at=1792276853
+Sat Oct 17 17:40:51 2026     bash /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.3zpKhJ/project/bin/fm-claude-stop-autoarm.sh
+===== pending record present after run: no
+===== rewake deliveries seen by the model (Stop hook feedback user messages)
+2
+===== assistant final texts
+CYCLE0
+ACK LIVEROW-ALPHA LIVEROW-ALPHA
+ACK LIVEROW-BRAVO LIVEROW-BRAVO
+===== assistant tool_use blocks
+===== real main drain of the lab home after the session (what is still queued)
+===== queue file
+wake-ack.log

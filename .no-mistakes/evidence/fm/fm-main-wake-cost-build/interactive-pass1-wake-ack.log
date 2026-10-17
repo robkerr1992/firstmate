@@ -1,0 +1,7 @@
+1792276962	record	ack_through=1 recovery_generation=live-gen-1 session_pid=37288
+1792276963	delivered	ack_through=1: the prompt is this record's own rewake; kept for its turn end
+1792276966	committed	ack_through=1 recovery_generation=live-gen-1
+1792276967	record	ack_through=2 recovery_generation=live-gen-2 session_pid=37288
+1792276968	delivered	ack_through=2: the prompt is this record's own rewake; kept for its turn end
+1792276973	committed	ack_through=2 recovery_generation=live-gen-2
+1792276974	suppressed	check: rearm-resurface presented nothing; acknowledged (ack_through=0 recovery_generation=live-gen-3) and re-armed without waking main

@@ -1,0 +1,50 @@
+
+ ▐▛███▛█   Claude Code v2.1.302
+▝▜██████▀  Opus 5.5 with low effort · Claude Max
+ ▝▝   ▝▝   /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.svqlJQ/project · /rc
+
+
+❯ Reply with exactly CYCLE0 and stop. Whenever a Stop hook feedback message wakes you: if it contains a line that is exactly "signal: LIVEROW-BRAVO", run exactly sleep 90 once with Bash and then
+  reply SLEPT; otherwise use no tool at all and reply with exactly ACK followed by every word in it that starts with LIVEROW. Then stop. Never run any other command.
+
+⏺ CYCLE0
+
+✻ Cooked for 5s · done 5:42 PM
+
+⏺ Stop hook feedback
+
+⏺ ACK LIVEROW-ALPHA
+
+✻ Brewed for 5s · done 5:42 PM
+
+⏺ Stop hook feedback
+
+  Ran 1 shell command
+
+⏺ Captain, the 90-second wait didn't run because the environment blocks a bare sleep 90. I didn't try another command, since your instructions allow only that one.
+
+✻ Brewed for 7s · done 5:42 PM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  -- INSERT -- ⏵⏵ bypass permissions on (shift+tab to cycle) · ← 1 agent

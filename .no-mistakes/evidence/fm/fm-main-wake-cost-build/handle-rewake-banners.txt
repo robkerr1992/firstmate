@@ -1,0 +1,16 @@
+Stop hook feedback:
+[[ -z "${GROK_AGENT:-}${GROK_HOOK_EVENT:-}" ] || exit 0; exec "$CLAUDE_PROJECT_DIR"/bin/fm-claude-stop-autoarm.sh]: firstmate watcher wake - one supervision event needs a handling turn now.
+Wake acknowledgement id: wake-ack-5a547c2981f532b1 (it pends until this turn ends).
+signal: LIVEROW-ALPHA
+WAKE PRESENTATION (this hook already ran bin/fm-wake-drain.sh for you; this is what it printed):
+1792276839	1	signal	live-alpha	signal: LIVEROW-ALPHA crew finished task one
+Handle the wake from that presentation; do not run bin/fm-wake-drain.sh again unless it says the presentation was cut. Its acknowledgement (--ack-through 1 --recovery-generation live-gen-1) runs automatically when this turn ends, so end the turn only once the wake is handled; to keep the wake open past this turn, run bin/fm-wake-ack.sh hold. This Stop hook owns watcher continuity: when the handling turn ends, the next needed cycle arms automatically - do NOT run bin/fm-watch-arm.sh after an ordinary wake.
+
+Stop hook feedback:
+[[ -z "${GROK_AGENT:-}${GROK_HOOK_EVENT:-}" ] || exit 0; exec "$CLAUDE_PROJECT_DIR"/bin/fm-claude-stop-autoarm.sh]: firstmate watcher wake - one supervision event needs a handling turn now.
+Wake acknowledgement id: wake-ack-2a2eaf92dc5c265d (it pends until this turn ends).
+signal: LIVEROW-BRAVO
+WAKE PRESENTATION (this hook already ran bin/fm-wake-drain.sh for you; this is what it printed):
+1792276847	2	signal	live-bravo	signal: LIVEROW-BRAVO crew finished task two
+Handle the wake from that presentation; do not run bin/fm-wake-drain.sh again unless it says the presentation was cut. Its acknowledgement (--ack-through 2 --recovery-generation live-gen-3) runs automatically when this turn ends, so end the turn only once the wake is handled; to keep the wake open past this turn, run bin/fm-wake-ack.sh hold. This Stop hook owns watcher continuity: when the handling turn ends, the next needed cycle arms automatically - do NOT run bin/fm-watch-arm.sh after an ordinary wake.
+

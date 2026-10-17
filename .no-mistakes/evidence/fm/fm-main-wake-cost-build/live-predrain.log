@@ -1,0 +1,46 @@
+Note: switching to '86b4b42bb3d8be61c20297da778908974be1c3a9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+claude rc=0
+=== arm-ran
+arm-run=1 pid=93650 ppid=93358 t=1792277633
+arm-run=2 pid=94178 ppid=93358 t=1792277633
+arm-run=3 pid=97724 ppid=97257 t=1792277640
+arm-run=4 pid=97748 ppid=97257 t=1792277640
+=== wake-ack.log
+1792277633	suppressed	check: rearm-resurface presented nothing; acknowledged (ack_through=0 recovery_generation=live-gen-1) and re-armed without waking main
+1792277635	record	ack_through=1 recovery_generation=94195.1792277633.hp0A4g session_pid=87214
+1792277640	committed	ack_through=1 recovery_generation=94195.1792277633.hp0A4g
+=== prompts.log
+{"t":1792277630.029155,"prompt":"Reply with exactly CYCLE0 and stop. Whenever a Stop hook feedback message wakes you, do NOT use any tool at all; reply with exactly ACK followed by every token starting with LIVE- that the message shows, then stop."}
+=== tool-calls.log
+=== .claude-autoarm-epoch
+epoch=2 owner_pid=97257 outcome=clean updated_at=1792277640
+Sat Oct 17 17:53:59 2026     bash /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.J9dk1h/project/bin/fm-claude-stop-autoarm.sh
+=== .watcher-down
+acked:handling:94195.1792277633.hp0A4g
+=== pending record left?
+ls: /var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T//fm-lab.J9dk1h/fmhome/state/.wake-ack-pending*: No such file or directory
+=== queue file
+arm-count
+arm-ran
+home-summary.json
+prompts.log
+terminal-outcomes
+wake-ack.log
+=== post-run plain drain (what main would see now)
+drain rc=0

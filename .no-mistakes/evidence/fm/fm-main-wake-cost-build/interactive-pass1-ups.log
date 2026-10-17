@@ -1,0 +1,34 @@
+1792276958 ---
+Reply with exactly CYCLE0 and stop. Whenever a Stop hook feedback message wakes you: if it contains a line that is exactly "signal: LIVEROW-BRAVO", run exactly `sleep 90` once with Bash and then reply SLEPT; otherwise use no tool at all and reply with exactly ACK followed by every word in it that starts with LIVEROW. Then stop. Never run any other command.
+
+pending_present=no
+1792276963 ---
+<task-notification>
+<summary>Stop hook feedback</summary>
+</task-notification>
+<system-reminder>
+Stop hook blocking error from command "Stop": firstmate watcher wake - one supervision event needs a handling turn now.
+Wake acknowledgement id: wake-ack-f562ae3129b58cde (it pends until this turn ends).
+signal: LIVEROW-ALPHA
+WAKE PRESENTATION (this hook already ran bin/fm-wake-drain.sh for you; this is what it printed):
+1792276960	1	signal	live-alpha	signal: LIVEROW-ALPHA crew finished task one
+Handle the wake from that presentation; do not run bin/fm-wake-drain.sh again unless it says the presentation was cut. Its acknowledgement (--ack-through 1 --recovery-generation live-gen-1) runs automatically when this turn ends, so end the turn only once the wake is handled; to keep the wake open past this turn, run bin/fm-wake-ack.sh hold. This Stop hook owns watcher continuity: when the handling turn ends, the next needed cycle arms automatically - do NOT run bin/fm-watch-arm.sh after an ordinary wake.
+
+</system-reminder>
+
+pending_present=yes
+1792276968 ---
+<task-notification>
+<summary>Stop hook feedback</summary>
+</task-notification>
+<system-reminder>
+Stop hook blocking error from command "Stop": firstmate watcher wake - one supervision event needs a handling turn now.
+Wake acknowledgement id: wake-ack-66ca0bbb0ea8f0b4 (it pends until this turn ends).
+signal: LIVEROW-BRAVO
+WAKE PRESENTATION (this hook already ran bin/fm-wake-drain.sh for you; this is what it printed):
+1792276966	2	signal	live-bravo	signal: LIVEROW-BRAVO crew finished task two
+Handle the wake from that presentation; do not run bin/fm-wake-drain.sh again unless it says the presentation was cut. Its acknowledgement (--ack-through 2 --recovery-generation live-gen-2) runs automatically when this turn ends, so end the turn only once the wake is handled; to keep the wake open past this turn, run bin/fm-wake-ack.sh hold. This Stop hook owns watcher continuity: when the handling turn ends, the next needed cycle arms automatically - do NOT run bin/fm-watch-arm.sh after an ordinary wake.
+
+</system-reminder>
+
+pending_present=yes
