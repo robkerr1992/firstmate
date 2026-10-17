@@ -1,0 +1,28 @@
+# lab home: /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.5jerFB (actor=main pr=open worktree=present gh=ok bin=/Users/robertkerr/.no-mistakes/worktrees/6ac0cc61f60b/01M55NXH9M53Y7H73AWESRFVPR/bin)
+# worktree /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.5jerFB/pool/.treehouse/project-5306d5/1/project at 99ddef6; on remote:   origin/fm/task-x1 
+$ env -u NO_MISTAKES_GATE -u FM_GATE_REFUSE_BYPASS -u FM_ROOT_OVERRIDE -u FM_STATE_OVERRIDE -u FM_DATA_OVERRIDE -u FM_CONFIG_OVERRIDE -u FM_PROJECTS_OVERRIDE FM_HOME=/private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.5jerFB TMUX_TMPDIR=/private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.5jerFB/tmux /Users/robertkerr/.no-mistakes/worktrees/6ac0cc61f60b/01M55NXH9M53Y7H73AWESRFVPR/bin/fm-pr-check.sh task-x1 https://github.com/cli/cli/pull/14727
+armed: state/task-x1.check.sh
+# before: state=[task-x1.check.sh task-x1.meta task-x1.pr-poll task-x1.pr-poll-registration ] backlog=in_flight
+# before: live forge says OPEN for https://github.com/cli/cli/pull/14727
+$ FM_HOME=$LAB FM_SUPERVISION_ACTOR=main /Users/robertkerr/.no-mistakes/worktrees/6ac0cc61f60b/01M55NXH9M53Y7H73AWESRFVPR/bin/fm-teardown.sh task-x1
+# teardown exit=0
+# --- stdout ---
+A new version of treehouse is available: v3.1.2 → v3.1.4
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+/private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.5jerFB/project: already current
+teardown task-x1 complete (window fmlab:fm-task-x1, worktree /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.5jerFB/pool/.treehouse/project-5306d5/1/project)
+Backlog: task-x1 is closed in /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.5jerFB/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+# --- stderr ---
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.5jerFB
+teardown: reaping leaked worktree process(es) for task-x1: 8050
+# after: state=[]
+# after: backlog=done
+# after: tmux windows=[]
+# after: worktree feature present=no; treehouse status:
+A new version of treehouse is available: v3.1.2 → v3.1.4
+Run "treehouse update" to update
+
+base  main  (repository default)
+1     available    /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.5jerFB/pool/.treehouse/project-5306d5/1/project  (detached)

@@ -1,0 +1,8 @@
+A new version of treehouse is available: v3.1.2 → v3.1.4
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+Composer could not find a composer.json file in /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.6gFVC4/pool/.treehouse/project-23aa6a/1/project
+To initialize a project, please create a composer.json file. See https://getcomposer.org/basic-usage
+🌳 hook command failed: "test -d vendor || composer install --no-interaction --ignore-platform-req=php" (exit 1): exit status 1
+🌳 Leased worktree at /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.6gFVC4/pool/.treehouse/project-23aa6a/1/project. Run 'treehouse return /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.6gFVC4/pool/.treehouse/project-23aa6a/1/project' to release it.

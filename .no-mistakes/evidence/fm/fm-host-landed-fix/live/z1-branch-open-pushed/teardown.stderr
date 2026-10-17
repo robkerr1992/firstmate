@@ -1,0 +1,3 @@
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.PMNq40
+REFUSED: task task-x1's pull request https://github.com/cli/cli/pull/14727 is not proven merged - the forge does not report it merged, could not be reached, or no PR is recorded - and the supervision branch only cleans up merged work.
+Leave the task for its merge notice: work on a remote whose PR is still open is safe but not landed.

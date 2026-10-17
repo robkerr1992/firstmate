@@ -1,0 +1,22 @@
+# lab home: /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.PMNq40 (actor=branch pr=open worktree=present gh=ok bin=/Users/robertkerr/.no-mistakes/worktrees/6ac0cc61f60b/01M55NXH9M53Y7H73AWESRFVPR/bin)
+# worktree /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.PMNq40/pool/.treehouse/project-3b3ff3/1/project at e9f1703; on remote:   origin/fm/task-x1 
+$ env -u NO_MISTAKES_GATE -u FM_GATE_REFUSE_BYPASS -u FM_ROOT_OVERRIDE -u FM_STATE_OVERRIDE -u FM_DATA_OVERRIDE -u FM_CONFIG_OVERRIDE -u FM_PROJECTS_OVERRIDE FM_HOME=/private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.PMNq40 TMUX_TMPDIR=/private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.PMNq40/tmux /Users/robertkerr/.no-mistakes/worktrees/6ac0cc61f60b/01M55NXH9M53Y7H73AWESRFVPR/bin/fm-pr-check.sh task-x1 https://github.com/cli/cli/pull/14727
+armed: state/task-x1.check.sh
+# before: state=[task-x1.check.sh task-x1.meta task-x1.pr-poll task-x1.pr-poll-registration ] backlog=in_flight
+# before: live forge says OPEN for https://github.com/cli/cli/pull/14727
+$ FM_HOME=$LAB FM_SUPERVISION_ACTOR=branch /Users/robertkerr/.no-mistakes/worktrees/6ac0cc61f60b/01M55NXH9M53Y7H73AWESRFVPR/bin/fm-teardown.sh task-x1
+# teardown exit=1
+# --- stdout ---
+# --- stderr ---
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.PMNq40
+REFUSED: task task-x1's pull request https://github.com/cli/cli/pull/14727 is not proven merged - the forge does not report it merged, could not be reached, or no PR is recorded - and the supervision branch only cleans up merged work.
+Leave the task for its merge notice: work on a remote whose PR is still open is safe but not landed.
+# after: state=[task-x1.check.sh task-x1.meta task-x1.pr-poll task-x1.pr-poll-registration ]
+# after: backlog=in_flight
+# after: tmux windows=[fm-task-x1 ]
+# after: worktree feature present=yes; treehouse status:
+A new version of treehouse is available: v3.1.2 → v3.1.4
+Run "treehouse update" to update
+
+base  main  (repository default)
+1     leased       /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.PMNq40/pool/.treehouse/project-3b3ff3/1/project  [fm/task-x1]  (held by task-x1)

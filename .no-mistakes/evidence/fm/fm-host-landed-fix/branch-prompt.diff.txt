@@ -1,0 +1,19 @@
+=== base commit prompt: landed-work cleanup paragraph ===
+38:A worker whose pull request has landed is finished, not stuck, and closing it is your job in both postures.
+39-A `check: merge landed:` wake names exactly that moment; a stale, inactive-outcome, or heartbeat row for a task whose current state is done with a merged PR is the same moment seen later, and "nothing to recover" is never the whole outcome for it.
+40-Claim the task's lease and run `bin/fm-teardown.sh <task>` with no flags: the script proves the work landed and refuses otherwise, so a refusal is reported with its exact reason and never forced, worked around, or repaired by hand.
+41-Report the cleanup in that event's outcome with the PR's URL.
+42-
+
+=== target commit prompt: landed-work cleanup paragraph ===
+38:A worker whose pull request has landed is finished, not stuck, and closing it is your job in both postures.
+39-For a pull-request task, that landed moment comes only from forge merge evidence: a `check: merge landed:` wake names exactly that moment, and a stale, inactive-outcome, or heartbeat row for a task whose current state is done is the same moment seen later only when the task's recorded PR URL reads merged on the forge (`gh-axi pr view <url>`), in which case "nothing to recover" is never the whole outcome for it.
+40-On that evidence, claim the task's lease and run `bin/fm-teardown.sh <task>` with no flags: for your actor the script also requires merge proof and refuses otherwise, but its success only proves no work would be lost and is never your merge evidence, and a refusal is reported with its exact reason and never forced, worked around, or repaired by hand.
+41-Without that evidence the PR is still open or its state is unknown, so the task has not landed: leave it in place and report it as awaiting merge, because an armed merge check announces the real merge.
+42-Report the cleanup in that event's outcome with the PR's URL.
+43-
+
+=== target: 'the script proves the work landed' occurrences ===
+0
+=== base: occurrences ===
+1

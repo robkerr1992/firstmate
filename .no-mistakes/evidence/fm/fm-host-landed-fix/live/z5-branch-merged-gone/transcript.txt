@@ -1,0 +1,20 @@
+# lab home: /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.ZrUZrT (actor=branch pr=merged worktree=gone gh=ok bin=/Users/robertkerr/.no-mistakes/worktrees/6ac0cc61f60b/01M55NXH9M53Y7H73AWESRFVPR/bin)
+# worktree /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.ZrUZrT/pool/.treehouse/project-44b205/1/project at 3c2873e; on remote:   origin/fm/task-x1   origin/rob/wrinkle-disk-page-dedupe 
+# worktree path recorded as gone (/private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.ZrUZrT/gone-worktree); pr=https://github.com/robkerr1992/wrinkle/pull/27 recorded on the task record
+# before: state=[task-x1.meta ] backlog=in_flight
+# before: live forge says MERGED for https://github.com/robkerr1992/wrinkle/pull/27
+$ FM_HOME=$LAB FM_SUPERVISION_ACTOR=branch /Users/robertkerr/.no-mistakes/worktrees/6ac0cc61f60b/01M55NXH9M53Y7H73AWESRFVPR/bin/fm-teardown.sh task-x1
+# teardown exit=0
+# --- stdout ---
+/private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.ZrUZrT/project: already current
+teardown task-x1 complete (window fmlab:fm-task-x1, worktree /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.ZrUZrT/gone-worktree)
+Backlog: task-x1 is closed in /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.ZrUZrT/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+# --- stderr ---
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.ZrUZrT
+# after: state=[]
+# after: backlog=done
+# after: tmux windows=[]
+# after: worktree feature present=no; treehouse status:
+
+base  main  (repository default)
+1     leased       /private/var/folders/8z/_vx339lx01z8y3smg01jwdrm0000gn/T/fm-lab.ZrUZrT/pool/.treehouse/project-44b205/1/project  [fm/task-x1-wt]  (held by task-x1)
